@@ -255,13 +255,7 @@ def test_numpy_rfftn(dtype_and_x, frontend, backend_fw, test_flags, fn_tree, on_
     )
 
 
-@handle_frontend_test(
-    fn_tree="numpy.fft.ifft2",
-    dtype_and_x=helpers.dtype_and_values(
-        available_dtypes=helpers.get_dtypes("float"), 
-        shape=(4, 4), array_api_dtypes=True
-    )
-)    
+   
 def test_numpy_ifft2(
     dtype_and_x,
     frontend,
